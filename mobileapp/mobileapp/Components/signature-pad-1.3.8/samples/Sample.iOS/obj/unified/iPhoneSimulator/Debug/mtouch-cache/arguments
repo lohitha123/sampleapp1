@@ -1,0 +1,42 @@
+# Version: 9.8.1.4 (c7sr0: 3cf8aae)
+# [first argument, ignore] # /Volumes/MacSys/Work/Xamarin/untitled folder/smartdocs/Components/signature-pad-1.3.8/samples/Sample.iOS/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/9.8.1.4/bin/mtouch \
+	--cache \
+	"/Volumes/MacSys/Work/Xamarin/untitled folder/smartdocs/Components/signature-pad-1.3.8/samples/Sample.iOS/obj/unified/iPhoneSimulator/Debug/mtouch-cache" \
+	--sim \
+	"/Volumes/MacSys/Work/Xamarin/untitled folder/smartdocs/Components/signature-pad-1.3.8/samples/Sample.iOS/bin/unified/iPhoneSimulator/Debug/SampleiOS.app" \
+	--executable \
+	SampleiOS \
+	--debug \
+	--linksdkonly \
+	--sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--sdk \
+	9.2 \
+	--targetver \
+	6.0 \
+	--http-message-handler=HttpClientHandler \
+	--tls-provider=default \
+	"--abi=i386,x86_64" \
+	--symbollist \
+	"/Volumes/MacSys/Work/Xamarin/untitled folder/smartdocs/Components/signature-pad-1.3.8/samples/Sample.iOS/obj/unified/iPhoneSimulator/Debug/mtouch-symbols.list" \
+	--dsym=no \
+	--gcc_flags \
+	"-Xlinker -sectcreate -Xlinker __TEXT -Xlinker __entitlements -Xlinker \"/Volumes/MacSys/Work/Xamarin/untitled folder/smartdocs/Components/signature-pad-1.3.8/samples/Sample.iOS/obj/unified/iPhoneSimulator/Debug/Entitlements.xcent\"" \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
+	-r \
+	"/Volumes/MacSys/Work/Xamarin/untitled folder/smartdocs/Components/signature-pad-1.3.8/lib/ios-unified/SignaturePad.iOS.dll" \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
+	-r \
+	"/Volumes/MacSys/Work/Xamarin/untitled folder/smartdocs/Components/signature-pad-1.3.8/lib/ios-unified/SignaturePad.iOS.dll" \
+	--target-framework \
+	"Xamarin.iOS,v1.0" \
+	"/Volumes/MacSys/Work/Xamarin/untitled folder/smartdocs/Components/signature-pad-1.3.8/samples/Sample.iOS/bin/unified/iPhoneSimulator/Debug//SampleiOS.exe" \

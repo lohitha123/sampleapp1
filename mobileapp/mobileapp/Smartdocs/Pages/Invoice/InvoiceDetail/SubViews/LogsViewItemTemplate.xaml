@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Smartdocs.LogsViewItemTemplate">
+
+	<Grid Padding="0,20,30,5" BackgroundColor="White">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="20*" />
+			<ColumnDefinition Width="80*" />
+		</Grid.ColumnDefinitions>
+
+		<StackLayout Grid.Column="0" Padding="15">
+			<Image HorizontalOptions="Center" VerticalOptions="Center" Source="logcircle.png" />
+		</StackLayout>
+
+		<StackLayout
+			Padding="0" 
+			Spacing="0"
+			Grid.Column="1"
+			Orientation="Horizontal"
+			HorizontalOptions="StartAndExpand"
+			>
+
+			<StackLayout 
+				HorizontalOptions="FillAndExpand" 
+				Spacing="0" 
+				Padding="10">
+
+			<Label
+					Text="{Binding User}" 
+					FontAttributes="Bold"
+					HorizontalOptions="FillAndExpand"
+					VerticalOptions="StartAndExpand"
+					TextColor="#FF212121" />
+
+			<StackLayout 
+					HorizontalOptions="FillAndExpand" 
+					Spacing="0" 
+					Padding="0,0,0,10">
+				<Label
+						Text="{Binding Date}"
+						TextColor="#838383"
+						FontSize="12" 
+						/>
+			</StackLayout>
+
+			<Label
+				Text="{Binding Comments}"
+				LineBreakMode="WordWrap"
+				TextColor="#838383"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand" />
+
+			</StackLayout>
+
+		</StackLayout>
+		
+	</Grid>
+</ContentView>

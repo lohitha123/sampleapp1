@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Smartdocs.RootPage"
+		Title="Main Page"
+		xmlns:local="clr-namespace:Smartdocs;assembly=Smartdocs"
+		IsPresented="false"
+		>
+	<MasterDetailPage.Master>
+		<local:MasterMenuPage x:Name="masterMenuPage" 
+                              BackgroundColor="White"/>
+        
+        
+	</MasterDetailPage.Master>
+
+	<MasterDetailPage.Detail>
+		<TabbedPage>
+			<NavigationPage Title="Inbox" Icon="inbox.png">
+				<x:Arguments>
+					<local:InboxPage />
+				</x:Arguments>
+			</NavigationPage>
+
+			<!--<NavigationPage Title="Requests" Icon="requests.png">
+				<x:Arguments>
+					<local:RequestPage />
+				</x:Arguments>
+			</NavigationPage>
+
+			<NavigationPage Title="Outbox" Icon="outbox.png">
+				<x:Arguments>
+					<local:OutboxPage />
+				</x:Arguments>
+			</NavigationPage>-->
+
+			<NavigationPage Title="Settings" Icon="setting.png">
+				<x:Arguments>
+					<local:SettingPage />
+				</x:Arguments>
+			</NavigationPage>
+		</TabbedPage>
+	</MasterDetailPage.Detail>
+    
+    
+    
+</MasterDetailPage>

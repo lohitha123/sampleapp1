@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Smartdocs.Login"
+		xmlns:local="clr-namespace:Smartdocs;assembly=Smartdocs"
+		BackgroundImage="{ StaticResource SignUpBackgroundImage }">
+	<!--<RelativeLayout>
+		<Image Source="login_screen.png" Opacity="1.0"
+                RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>-->
+	<ScrollView >
+		<!--<Image Source="login_screen.png" Aspect="AspectFill" />-->
+		<!-- MAIN CONTAINER -->
+		<Grid
+			ColumnSpacing="0" 
+			RowSpacing="0" 
+			HorizontalOptions="Fill"
+			VerticalOptions="FillAndExpand" >
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="52*" />
+				<RowDefinition Height="30*" />
+				<RowDefinition Height="18*" />
+			</Grid.RowDefinitions>
+
+			<Grid
+				Grid.Row="0"
+				>
+				<ActivityIndicator x:Name="indicator"></ActivityIndicator>
+			</Grid>
+				
+			<!---FIELDS CONTAINER-->
+			<Grid 
+				Padding="40, 0"
+				ColumnSpacing="0" 
+				RowSpacing="9" 
+				Grid.Row="1"
+				VerticalOptions="CenterAndExpand">
+					
+				<StackLayout
+					Grid.Row="0"
+					VerticalOptions="CenterAndExpand" >
+					<local:EntryExt
+						Placeholder="Company ID"
+						x:Name="companyid"
+						Text = "2000"
+						TextColor="Black"
+						/>
+				</StackLayout>
+
+					
+				<StackLayout
+					Grid.Row="1"
+					VerticalOptions="CenterAndExpand" 
+					>
+					<local:EntryExt
+						Placeholder="User name"
+						x:Name="username"
+						Text = "actipadmin"
+						TextColor="Black"
+						/>
+					
+				</StackLayout>
+
+				<!---PASSWORD FIELD-->
+				<StackLayout
+					Grid.Row="2"
+					VerticalOptions="CenterAndExpand"
+					>
+					<Entry
+						TextColor="Black"
+						Placeholder="Password"
+						Text = "actipadmin"
+						IsPassword="true"
+						x:Name="password"/>
+					
+				</StackLayout>
+			</Grid>
+
+			<!-- FOOTER -->
+			<Grid 
+				Padding="10"
+				Grid.Row="2" 
+				>
+
+				<!--<Button
+					VerticalOptions="CenterAndExpand"
+					x:Name="loginButton"
+					Image="login_button.png"
+					/>-->
+				<StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+					
+					<Button
+						VerticalOptions="CenterAndExpand"
+						BackgroundColor="#1122ee"
+						x:Name="loginButton"
+						Text="Sign In"
+						TextColor="White"/>
+				</StackLayout>
+			</Grid>
+		</Grid>
+	</ScrollView>
+	<!--</RelativeLayout>-->
+</ContentPage>

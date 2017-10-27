@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Application
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Smartdocs.App"
+	xmlns:mark="clr-namespace:Smartdocs.Shared;assembly=Smartdocs.Shared"
+	>
+
+	<Application.Resources>
+		<ResourceDictionary>
+			<!-- Main Variables -->
+			<Color x:Key="MainBackground">#f2f9fc</Color>
+			<Color x:Key="DarkMainBackground">#0d73a2</Color>
+			<Color x:Key="AccentColor">#FFDA125F</Color>
+			<Color x:Key="MainMenuBackgroundColor">#283441</Color>
+			<Color x:Key="ButtonBorderColor">#0000ff</Color>
+
+			<FileImageSource x:Key="SignUpBackgroundImage">login_screen.png</FileImageSource>
+
+			<!---Login Page Variables -->
+			<Style x:Key="LoginScrollView" TargetType="ScrollView">
+				<Setter Property="BackgroundColor" Value="{StaticResource MainBackground}" />
+			</Style>
+
+			<Style x:Key="LoginEntryStyle" TargetType="Entry">
+				<Setter Property="TextColor" Value="Black" />
+				<Setter Property="BackgroundColor" Value="Transparent"/>
+			</Style>
+
+			<Style x:Key="SmartdocsLoginEntryStyle" TargetType="Entry" BasedOn="{ StaticResource LoginEntryStyle }" >
+				<Style.Triggers>
+					<Trigger TargetType="Entry"
+						Property="IsFocused" Value="True">
+					</Trigger>
+				</Style.Triggers>
+			</Style>
+
+			<x:Double x:Key="BaseFontSize">16</x:Double>
+			<x:Double x:Key="BaseButtonHeight">44</x:Double>
+
+			<Style x:Key="RoundedButtonStyle" TargetType="Button">
+				<Setter Property="FontSize" Value="{StaticResource BaseFontSize}" />
+				<Setter Property="BorderRadius" Value="22" />
+				<Setter Property="HeightRequest" Value="{StaticResource BaseButtonHeight}"/>
+				<Setter Property="TextColor" Value="White" />
+			</Style>
+
+			<Style x:Key="BlueButtonStyle" TargetType="Button">
+				<Setter Property="FontSize" Value="{StaticResource BaseFontSize}" />
+				<Setter Property="HeightRequest">
+					<Setter.Value>
+						<OnPlatform x:TypeArguments="x:Double" 
+							Android="40"
+							iOS="35" />
+					</Setter.Value>
+				</Setter>
+				<Setter Property="WidthRequest" Value="100" />
+				<Setter Property="BorderWidth" Value="0.1" />
+				<Setter Property="BackgroundColor" Value="#338dff" />
+				<Setter Property="TextColor" Value="#ffffff" />
+			</Style>
+
+			<Style x:Key="ApproveButtonStyle" TargetType="Button">
+				<Setter Property="FontSize" Value="{StaticResource BaseFontSize}" />
+				<Setter Property="HeightRequest">
+					<Setter.Value>
+						<OnPlatform x:TypeArguments="x:Double" 
+							Android="35" 
+							iOS="35" />
+					</Setter.Value>
+				</Setter>
+				<Setter Property="WidthRequest" Value="75" />
+				<Setter Property="BorderWidth" Value="0.1" />
+				<Setter Property="TextColor" Value="#ffffff" />
+			</Style>
+
+      <Style x:Key="CollaborateBackButtonStyle" TargetType="Button">
+        <Setter Property="FontSize" Value="{StaticResource BaseFontSize}" />
+        <Setter Property="HeightRequest">
+          <Setter.Value>
+            <OnPlatform x:TypeArguments="x:Double"
+							Android="40"
+							iOS="35" />
+          </Setter.Value>
+        </Setter>
+        <Setter Property="WidthRequest" Value="200" />
+        <Setter Property="BorderWidth" Value="0.1" />
+        <Setter Property="TextColor" Value="#ffffff" />
+      </Style>
+
+			<!-- LOGINS STYLES -->
+			<Style x:Key="PrimaryActionButtonStyle" TargetType="Button" BasedOn="{StaticResource RoundedButtonStyle}">
+				<Setter Property="BackgroundColor" Value="{StaticResource DarkMainBackground}"/>
+				<Setter Property="HeightRequest" Value="{StaticResource BaseButtonHeight}"/>
+			</Style>
+
+			<!-- Main Inbox/Outbox/Requests/Setting Page Style -->
+			<Style x:Key="MainPageStyle" TargetType="StackLayout">
+				<Setter Property="BackgroundColor" Value="{StaticResource MainBackground}" />
+				<Setter Property="VerticalOptions" Value="FillAndExpand" />
+			</Style>
+
+
+			<!-- Main Header Style -->
+			<Style x:Key="MainHeaderBarStyle" TargetType="StackLayout">
+				<Setter Property="HeightRequest">
+					<Setter.Value>
+						<OnPlatform x:TypeArguments="x:Double" 
+							Android="46" 
+							iOS="56" />
+					</Setter.Value>
+				</Setter>
+				<Setter Property="Orientation" Value="Horizontal" />
+				<Setter Property="VerticalOptions" Value="Center" />
+				<Setter Property="Padding" Value="10, 20, 10, 0" />
+			</Style>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

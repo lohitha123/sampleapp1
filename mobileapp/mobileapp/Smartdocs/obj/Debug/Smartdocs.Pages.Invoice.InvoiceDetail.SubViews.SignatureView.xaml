@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:acr="clr-namespace:Acr.XamForms.SignaturePad;assembly=Acr.XamForms.SignaturePad"
+	x:Class="Smartdocs.SignatureView"
+	BackgroundColor="#f2f9fc">
+    <Grid Padding="10" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*" />
+            <RowDefinition Height="10*" />
+          
+        </Grid.RowDefinitions>
+
+
+        <StackLayout Grid.Row="0">
+            <ScrollView >
+                <StackLayout x:Name="signatureRow" >
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1"  VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"  Margin="0,0,8,0">
+            <Button x:Name="SignButton" Text="Sign" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand" Style="{StaticResource BlueButtonStyle}"/>
+        </StackLayout>
+
+
+       
+
+
+    </Grid>
+</ContentView>

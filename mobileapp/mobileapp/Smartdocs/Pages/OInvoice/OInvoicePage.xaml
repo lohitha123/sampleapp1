@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:local="clr-namespace:Smartdocs;assembly=Smartdocs"
+		x:Class="Smartdocs.OInvoicePage">
+	
+	<StackLayout>
+		<Grid VerticalOptions="FillAndExpand">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<!--<RowDefinition Height="Auto" />-->
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+
+			<StackLayout HeightRequest="77" Grid.Row="0">
+				<local:MainHeader />
+			</StackLayout>
+			<!--<StackLayout HeightRequest="30" Orientation="Horizontal" Grid.Row="1" Padding="10, 0" VerticalOptions="Fill" >
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<StackLayout Grid.Column="0" Orientation="Horizontal"  HorizontalOptions="Center">
+						<Image Source="invoices.png" WidthRequest="22" HeightRequest="22" />
+						<Label x:Name="pagelabel" TextColor="#0d73a2" FontSize="12" VerticalOptions="Center" Text="INVOICE"/>
+					</StackLayout>
+				</Grid>
+			</StackLayout>-->
+
+			<ScrollView Grid.Row="1" BackgroundColor="#f2f9fc" VerticalOptions="FillAndExpand">
+				<Grid Padding="15" ColumnSpacing="10" >
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+
+					<!---Left Column Content -->
+					<ActivityIndicator HorizontalOptions="Center" x:Name="actIndicator2" />
+					<StackLayout 
+						x:Name="InvoiceRow"
+						Grid.Column="0"
+						>
+					</StackLayout>
+				</Grid>
+			</ScrollView>
+
+		</Grid>
+
+	</StackLayout>
+</ContentPage>

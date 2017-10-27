@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+              x:Class="Smartdocs.Pages.Invoice.InvoiceDetail.SubViews.CollobarateBackPopup"
+              xmlns:local="clr-namespace:Smartdocs.Custom; assembly=Smartdocs">
+  <ScrollView>
+    <Grid>
+      <StackLayout x:Name="PopUpBgLayout"
+                  />
+      <StackLayout x:Name="PopUpDialogLayout"
+          Margin="30,50,30,150"
+          BackgroundColor="White"
+          Orientation="Vertical">
+        <StackLayout Orientation="Vertical"
+                     Margin="0,0,0,0"/>
+        <StackLayout HeightRequest="40" Margin="0,-7,0,0" BackgroundColor="Green" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+          <Label Text="User Comment"
+                 TextColor="White"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="CenterAndExpand" Margin="20,0,0,0"
+                 FontSize="18"></Label>
+          <Image x:Name="PopUpDialogClose" Source="cancelwhite.png" WidthRequest="20" Margin="0,0,10,0" HorizontalOptions="End"></Image>
+        </StackLayout>
+        <StackLayout >
+          <Grid x:Name="ChangePwdGrid" Grid.Row="0"  RowSpacing="10" >
+            <Grid.RowDefinitions>
+              <RowDefinition Height="50"></RowDefinition>
+              <RowDefinition Height="Auto"></RowDefinition>
+              <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <local:CustomEntryBorder Grid.Row="1" x:Name="entryUserComment" TextColor="Black" Margin="10,15,10,0" HeightRequest="120" />
+            <!--<Entry Grid.Row="1" x:Name="entryUserComment" TextColor="Black"  />-->
+            <Button Grid.Row="2" x:Name="ButtonSend" Margin="0,40,15,0"  Text="SEND" HorizontalOptions="CenterAndExpand" Style="{StaticResource ApproveButtonStyle}" BackgroundColor="#000000" IsVisible="true"></Button>
+          </Grid>
+        </StackLayout>
+      </StackLayout>
+    </Grid>
+  </ScrollView>
+</pages:PopupPage>

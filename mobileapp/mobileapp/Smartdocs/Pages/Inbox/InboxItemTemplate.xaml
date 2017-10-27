@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Smartdocs.InboxItemTemplate"
+	Padding="0, 20, 0, 0"
+	BackgroundColor="White"
+	>
+	<StackLayout HeightRequest="120">
+		<Label 
+			Text="{Binding Title}"
+			FontSize="13"
+			TextColor="#37474f"
+			FontAttributes="Bold"
+			HorizontalOptions="CenterAndExpand" />
+
+		<StackLayout Padding="0,10,0,10">
+			<Label
+				Text="{Binding Status}"
+				FontSize ="12"
+				HorizontalOptions="CenterAndExpand"
+				TextColor="#37474f"
+			/>
+
+		</StackLayout>
+		<Image
+			Source="{Binding ImageIcon}"
+			WidthRequest="36"
+			HeightRequest="36" />
+	</StackLayout>
+
+</ContentView>

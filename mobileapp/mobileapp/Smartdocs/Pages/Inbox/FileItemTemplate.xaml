@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Smartdocs.Pages.Inbox.FileItemTemplate"
+   Padding="5,15,0,0"
+	BackgroundColor="White">
+
+    <StackLayout  HeightRequest="40">
+        <Label 
+            
+			Text="{Binding FolderName}"
+			FontSize="13"
+			TextColor="#37474f"
+			FontAttributes="Bold"
+			YAlign="Center"
+            />
+
+       
+       
+    </StackLayout>
+</ContentView>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Smartdocs.OutboxMainView"
+		BackgroundColor="#f2f9fc">
+	<ScrollView>
+		<Grid Padding="10, 10, 10, 50" RowSpacing="5" >
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+			</Grid.RowDefinitions>
+
+			<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#0d73a2" Grid.Row="0" HeightRequest="5"></StackLayout>
+			<StackLayout x:Name="Row" Grid.Row="1"></StackLayout>
+
+		</Grid>
+	</ScrollView>
+</ContentView>

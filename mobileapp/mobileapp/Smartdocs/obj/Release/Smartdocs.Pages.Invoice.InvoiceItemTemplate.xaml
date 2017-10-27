@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Smartdocs.InvoiceItemTemplate"
+	Padding="10, 15, 10, 10"
+	BackgroundColor="White"
+	>
+
+	<StackLayout x:Name="MainContainer">
+			<StackLayout Orientation="Horizontal" >
+				<Label FontSize="10" Text="{Binding WorkitemTitle}" TextColor="Gray" />
+				<Label 
+					TextColor="#2b2b2b"
+					Text="{Binding InvoiceID}"
+					FontSize="10"
+					FontAttributes="Bold" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" >
+				<Label 
+					FontSize="10" 
+					Text="{Binding L1}" 
+					TextColor="Gray" />
+				<Label 
+					Text="{Binding V1}"
+					TextColor="#2b2b2b"
+					FontSize="9"
+					FontAttributes="Bold" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" >
+				<Label 
+					FontSize="10" 
+					Text="{Binding L2}" 
+					TextColor="Gray" />
+				<Label 
+					Text="{Binding V2}"
+					FontSize="11"
+					TextColor="#2b2b2b"
+					FontAttributes="Bold" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" >
+				<Label 
+					FontSize="10" 
+					Text="{Binding L3}" 
+					TextColor="Gray" />
+				<Label 
+					Text="{Binding V3}"
+					FontSize="11"
+					TextColor="#2b2b2b"
+					FontAttributes="Bold" />
+			</StackLayout>
+		</StackLayout>
+		
+</ContentView>

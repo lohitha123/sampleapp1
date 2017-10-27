@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Smartdocs.Pages.Invoice.InvoiceDetail.SubViews.ExistingFilesView">
+    <ContentPage.Content>
+      
+        <Grid Padding="10" 
+              RowSpacing="0.8" 
+              BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*" />
+
+                <RowDefinition Height="78*" />
+
+
+            </Grid.RowDefinitions>
+
+
+            <Grid x:Name="stkbackbutton"  
+			Padding="0,10"
+			RowSpacing="0" 
+			HorizontalOptions="Fill"
+			VerticalOptions="FillAndExpand"
+                         Grid.Row="0"
+                         Grid.ColumnSpan="2"
+                         BackgroundColor="White">
+
+                <Grid.RowDefinitions>
+
+
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnPlatform x:TypeArguments="GridLength"
+                                  iOS="10*"
+                                   Android="20*"
+                                   WinPhone="2" />
+                        </RowDefinition.Height>
+                    </RowDefinition>
+                </Grid.RowDefinitions>
+
+
+
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Image x:Name="backpng"                                                         
+                       Grid.Row="0"
+				HorizontalOptions="Start"
+				VerticalOptions="Center"
+				WidthRequest="24"
+				HeightRequest="24"
+                       Aspect="AspectFit"
+                       Grid.Column="0"                    
+                       Source="back.png">
+                </Image>
+
+
+                <Label x:Name="MenuBarlblTitle"
+                       StyleId="MenuBarlblTitle" 
+                       YAlign="Center"
+                       TextColor="Black"
+				      HorizontalOptions="Start"
+				      VerticalOptions="Center"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2">
+
+
+                </Label>
+
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="imgBack_Clicked"/>
+                </Grid.GestureRecognizers>
+
+            </Grid>
+
+
+
+            <ScrollView Grid.Row="1"
+                        BackgroundColor="#f2f9fc"
+                     Grid.ColumnSpan="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="67*" />
+                        <RowDefinition Height="10*" />
+                        <RowDefinition Height="23*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid Padding="10" Grid.Row="0" ColumnSpacing="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!---Left Column Content -->
+                        <StackLayout x:Name="LeftColumn" Grid.Column="0"></StackLayout>
+
+                        <!-- Right Column Content-->
+                        <StackLayout x:Name="RightColumn" Grid.Column="1"></StackLayout>
+                    </Grid>
+
+
+                </Grid>
+            </ScrollView>
+
+
+
+
+
+        </Grid>
+
+      
+    </ContentPage.Content>
+</ContentPage>

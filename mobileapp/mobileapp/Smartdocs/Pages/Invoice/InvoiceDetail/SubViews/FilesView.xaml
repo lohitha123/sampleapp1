@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Smartdocs.FilesView"
+	BackgroundColor="#f2f9fc">
+
+
+
+    <Grid Padding="10" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*" />
+            <RowDefinition Height="10*" />
+
+        </Grid.RowDefinitions>
+
+
+        <ScrollView   Grid.ColumnSpan="2"
+           Grid.Column="0" BackgroundColor="#f2f9fc" VerticalOptions="FillAndExpand">
+            <Grid Padding="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout 
+							x:Name="FilesViewRow"
+							Grid.Column="0">
+
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+
+       
+
+
+        <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"  Margin="0,0,8,0">
+            <Button x:Name="AddButton" Text="Add" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" Style="{StaticResource BlueButtonStyle}"/>
+        </StackLayout>
+
+
+
+    </Grid>
+</ContentView>

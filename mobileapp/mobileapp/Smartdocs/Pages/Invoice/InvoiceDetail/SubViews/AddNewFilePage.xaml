@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Smartdocs.AddNewFilePage">
+    <Grid Padding="10" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+
+            <RowDefinition Height="78*" />
+          
+           
+        </Grid.RowDefinitions>
+
+
+        <Grid x:Name="stkbackbutton"  
+			Padding="0,10"
+			RowSpacing="0" 
+			HorizontalOptions="Fill"
+			VerticalOptions="FillAndExpand"
+                         Grid.Row="0"
+                         Grid.ColumnSpan="2"
+                         BackgroundColor="White">
+
+			 <Grid.RowDefinitions>
+
+				
+			<RowDefinition>
+               <RowDefinition.Height>
+                <OnPlatform x:TypeArguments="GridLength"
+                                  iOS="10*"
+                                   Android="20*"
+                                   WinPhone="2" />
+            </RowDefinition.Height>
+             </RowDefinition>
+			  </Grid.RowDefinitions>
+
+			
+			
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Image x:Name="backpng"                                                         
+                       Grid.Row="0"
+				HorizontalOptions="Start"
+				VerticalOptions="Center"
+				WidthRequest="24"
+				HeightRequest="24"
+                       Aspect="AspectFit"
+                       Grid.Column="0"                    
+                       Source="back.png">
+            </Image>
+
+
+            <Label x:Name="MenuBarlblTitle"
+                       StyleId="MenuBarlblTitle" 
+                       YAlign="Center"
+                       TextColor="Black"
+				      HorizontalOptions="Start"
+				VerticalOptions="Center"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2">
+
+
+            </Label>
+
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="imgBack_Clicked"/>
+            </Grid.GestureRecognizers>
+
+        </Grid>
+
+      
+
+    <ScrollView Grid.Row="1"
+                     Grid.ColumnSpan="2">
+        <Grid Padding="10" ColumnSpacing="10" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Column="0" Grid.Row="0" BackgroundColor="White" Padding="10, 20">
+                <Label HorizontalOptions="Center" 
+                       Text="Select Photos" 
+                       TextColor="Black">
+                    
+                </Label>
+                <Button x:Name="pickPhoto" 
+                        Clicked="pickPhoto_Clicked"
+                        BackgroundColor="Transparent" 
+                        Image="photo_library64.png" 
+                        WidthRequest="55" 
+                        HeightRequest="55" 
+                        VerticalOptions="EndAndExpand" 
+                        HorizontalOptions="Center"/>
+
+            </StackLayout>
+
+            <StackLayout Grid.Column="1" Grid.Row="0" BackgroundColor="White" Padding="10, 20">
+                <Label HorizontalOptions="Center" 
+                       Text="Take a Picture" 
+                       TextColor="Black"></Label>
+                <Button x:Name="takePhoto" 
+                        BackgroundColor="Transparent"
+                        Image="camera64.png" 
+                        WidthRequest="55" 
+                        HeightRequest="55"
+                        Clicked="takePhoto_Clicked"                    
+                        VerticalOptions="EndAndExpand" 
+                        HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row = "1">
+                <Button x:Name = "removeBtn" 
+                        Clicked="removeBtn_Clicked"
+                        BackgroundColor="Transparent" 
+                        Image="deny.png" 
+                       
+                        HorizontalOptions="EndAndExpand" 
+                        IsVisible="false"></Button>
+                <Image  HorizontalOptions="Center" x:Name="image"/>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+
+
+
+      
+
+    </Grid>
+</ContentPage>

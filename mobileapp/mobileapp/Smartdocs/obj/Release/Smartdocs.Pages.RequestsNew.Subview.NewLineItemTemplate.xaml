@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Smartdocs.NewLineItemTemplate"
+		BackgroundColor="White">
+	
+	<Grid BackgroundColor="White" Padding="5, 7">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+		<StackLayout Grid.Row="0" Grid.Column="0">
+			<Label HorizontalOptions="StartAndExpand" TextColor="Gray" Text="{Binding Material}" ></Label>
+		</StackLayout>
+		<StackLayout Grid.Row="0" Grid.Column="1">
+			<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="80*" />
+				<ColumnDefinition Width="20*" />
+			</Grid.ColumnDefinitions>
+			<DatePicker x:Name="DatePicker" Grid.Column="0" Date="{Binding DateData}"/>
+			<Entry x:Name="EntryAmount" Grid.Column="0" HorizontalOptions="FillAndExpand" Text="{Binding Amount}"></Entry>
+			<Image x:Name="BarcodeScanner" Grid.Column="1" HorizontalOptions="EndAndExpand" Source="material64.png" IsVisible="false"/>
+			</Grid>
+		</StackLayout>
+	</Grid>
+</ContentView>

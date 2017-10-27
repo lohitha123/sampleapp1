@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Smartdocs.MainHeader"
+	VerticalOptions="Center"
+	>
+	<StackLayout 
+		Style="{ StaticResource MainHeaderBarStyle }"
+		BackgroundColor="White">
+		<Image
+			HorizontalOptions="Start"
+			VerticalOptions="Center"
+			WidthRequest="18"
+			HeightRequest="18"
+			Source="toggle_menu.png">
+			<Image.GestureRecognizers>
+				<TapGestureRecognizer Tapped="OnHamburgerIconTapped" />
+			</Image.GestureRecognizers>
+		</Image>
+		
+		<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+			<Label 
+				HorizontalOptions="CenterAndExpand"
+				VerticalOptions="Center"
+				FontSize="18"
+				Text="SmartDocs"
+				x:Name="HeadTitle"
+				TextColor="Black" />
+		</StackLayout>
+
+		<!--<Image
+			HorizontalOptions="End"
+			VerticalOptions="Center"
+			Source="search.png"
+			WidthRequest="18"
+			HeightRequest="18"
+			/>-->
+
+	</StackLayout>
+</ContentView>

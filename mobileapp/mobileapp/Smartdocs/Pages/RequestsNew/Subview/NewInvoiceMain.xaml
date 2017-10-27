@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Smartdocs.NewInvoiceMain">
+	<ScrollView>
+		<Grid Padding="10, 10, 10, 50" RowSpacing="5" >
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"></RowDefinition>
+				<RowDefinition Height="Auto"></RowDefinition>
+			</Grid.RowDefinitions>
+			<StackLayout HorizontalOptions="FillAndExpand" BackgroundColor="#0d73a2" Grid.Row="0" HeightRequest="5"></StackLayout>
+			<StackLayout x:Name="Row" Grid.Row="1"></StackLayout>
+		</Grid>
+		
+		<!--<StackLayout >
+			<StackLayout Style="{StaticResource MainPageStyle}" Padding="10, 10">
+				<Grid Padding="10, 10" ColumnSpacing="10" RowSpacing="10" BackgroundColor="White">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*" />
+						<ColumnDefinition Width="*" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="35" />
+						<RowDefinition Height="35" />
+						<RowDefinition Height="35" />
+						<RowDefinition Height="35" />
+						<RowDefinition Height="35" />
+						<RowDefinition Height="35" />
+						<RowDefinition Height="35" />
+					</Grid.RowDefinitions>
+					<Label 
+						Text="Type:" 
+						Grid.Row="0" 
+						Grid.Column="0" 
+						TextColor="#555555"
+						VerticalOptions="Center"
+						/>
+					<Picker 
+						x:Name="PickerDocType"
+						Grid.Row="0"
+						Grid.Column="1"
+						SelectedIndex="{Binding DocType, Mode=TwoWay}">
+						<Picker.Items>
+				        </Picker.Items>
+			        </Picker>
+					<Label 
+						Text="Vendor:" 
+						Grid.Row="1" 
+						Grid.Column="0" 
+						TextColor="#555555"
+						VerticalOptions="Center"
+						/>
+					<Entry
+						Grid.Row="1"
+						Grid.Column="1"
+						/>
+					<Label 
+						Text="Amount:" 
+						Grid.Row="2" 
+						Grid.Column="0" 
+						TextColor="#555555"
+						VerticalOptions="Center"
+						/>
+					<Entry
+						Grid.Row="2" 
+						Grid.Column="1"
+						/>
+					<Label 
+						Text="Reference:" 
+						Grid.Row="3" 
+						Grid.Column="0" 
+						TextColor="#555555"
+						VerticalOptions="Center"
+						/>
+					<Entry
+						Grid.Row="3" 
+						Grid.Column="1"
+						/>
+
+					<Label 
+						Text="Material:" 
+						Grid.Row="4" 
+						Grid.Column="0" 
+						TextColor="#555555"
+						VerticalOptions="Center"
+						/>
+					<StackLayout Orientation="Horizontal" Grid.Row="4" Grid.Column="1">
+						<Grid HorizontalOptions="FillAndExpand">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="Auto" />
+							</Grid.ColumnDefinitions>
+						<Entry x:Name="BarCodeResult" HorizontalOptions="FillAndExpand" Grid.Column="0"/>
+						<Image x:Name="BarcodeScanner" Source="material64.png" HorizontalOptions="EndAndExpand" Grid.Column="1">
+						</Image>
+						</Grid>
+					</StackLayout>
+
+				</Grid>
+			</StackLayout>
+		</StackLayout>-->
+	</ScrollView>
+</ContentView>

@@ -1,0 +1,26 @@
+﻿<Properties StartupItem="Sample.iOS.csproj">
+  <MonoDevelop.Ide.ItemProperties.Sample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/SampleController.cs">
+    <Files>
+      <File FileName="Views/SampleView.cs" Line="31" Column="21" />
+      <File FileName="Controllers/SampleController.cs" Line="17" Column="7" />
+      <File FileName="AppDelegate.cs" Line="39" Column="16" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Volumes/MacSys/Work/Xamarin/smartdocs/Smartdocs/View/LogsPage.cs" line="12" column="1" />
+      <Breakpoint file="/Volumes/MacSys/Work/Xamarin/smartdocs/Smartdocs/View/SmartTaskList.cs" line="11" column="1" />
+      <Breakpoint file="/Volumes/MacSys/Work/Xamarin/smartdocs/Smartdocs/Pages/RequestsNew/Custom/CarouselLayout.cs" line="12" column="1" />
+      <Breakpoint file="/Volumes/MacSys/Work/Xamarin/smartdocs/Smartdocs/Pages/OInvoice/OInvoiceDetail/Custom/CarouselLayout.cs" line="12" column="1" />
+      <Breakpoint file="/Volumes/MacSys/Work/Xamarin/smartdocs/Smartdocs/Pages/RequestsNew/NewInvoice.cs" line="120" column="1" />
+      <Breakpoint file="/Volumes/MacSys/Work/Xamarin/untitled folder/smartdocs/Smartdocs/Pages/OInvoice/OInvoiceDetail/Helper/PagerIndicatorTabs.cs" line="14" column="1" />
+      <Breakpoint file="/Volumes/MacSys/Work/Xamarin/untitled folder/smartdocs/Smartdocs/Pages/Invoice/InvoiceDetail/Helper/PagerIndicatorTabs.cs" line="14" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../../Smartdocs/Network/HttpHandler.cs" line="127" offsetX="936" offsetY="2602" expression="httpClient.DefaultRequestHeaders" liveUpdate="False" />
+    <Watch file="../../../../Smartdocs/Network/HttpHandler.cs" line="140" offsetX="894" offsetY="2331" expression="ex" liveUpdate="True" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>

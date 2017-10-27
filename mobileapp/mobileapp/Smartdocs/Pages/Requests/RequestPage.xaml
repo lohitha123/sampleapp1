@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:Smartdocs;assembly=Smartdocs"
+	x:Class="Smartdocs.RequestPage"
+	Icon="requests24.png"
+	Title="Requests"
+	>
+	<StackLayout>
+		<local:MainHeader />
+		<StackLayout Style="{StaticResource MainPageStyle}">
+			<Grid>
+				<StackLayout>
+					<ScrollView>
+						<Grid Padding="10" ColumnSpacing="10" >
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*" />
+								<ColumnDefinition Width="*" />
+							</Grid.ColumnDefinitions>
+
+							<!---Left Column Content -->
+							<StackLayout 
+								x:Name="LeftColumn"
+								Grid.Column="0"
+								>
+							</StackLayout>
+
+							<!-- Right Column Content-->
+							<StackLayout 
+								x:Name="RightColumn"
+								Grid.Column="1">
+							</StackLayout>
+
+						</Grid>
+					</ScrollView>
+				</StackLayout>
+			</Grid>
+		</StackLayout>
+	</StackLayout>
+</ContentPage>

@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{16D9E2AD-17E8-4369-9164-001B8C0E8AD4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Smartdocs</RootNamespace>
+    <AssemblyName>Smartdocs</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Custom\CustomEditor.cs" />
+    <Compile Include="Custom\CustomPicker.cs" />
+    <Compile Include="IKeyboardHelper.cs" />
+    <Compile Include="KeyboardHelperBR.cs" />
+    <Compile Include="Pages\Inbox\FileItemTemplate.xaml.cs">
+      <DependentUpon>FileItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\CollobarateBackPopup.xaml.cs">
+      <DependentUpon>CollobarateBackPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\ExistingFilesView.xaml.cs">
+      <DependentUpon>ExistingFilesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\PopupView.xaml.cs">
+      <DependentUpon>PopupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Models\DocDataModel.cs" />
+    <Compile Include="Models\HeaderModel.cs" />
+    <Compile Include="Models\WorkFlowFieldModel.cs" />
+    <Compile Include="Models\AttachmentModel.cs" />
+    <Compile Include="Models\LogModel.cs" />
+    <Compile Include="Models\WorkItemModel.cs" />
+    <Compile Include="Network\HttpHandler.cs" />
+    <Compile Include="View\SmartTaskList.cs" />
+    <Compile Include="View\WorkItemListPage.cs" />
+    <Compile Include="View\LogsPage.cs" />
+    <Compile Include="BarCodeScannerService.cs" />
+    <Compile Include="View\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Smartdocs.xaml.cs">
+      <DependentUpon>Smartdocs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RootPage.xaml.cs">
+      <DependentUpon>RootPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\MasterPageItem.cs" />
+    <Compile Include="View\MasterMenuPage.xaml.cs">
+      <DependentUpon>MasterMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\InboxViewModel.cs" />
+    <Compile Include="Pages\Inbox\InboxPage.xaml.cs">
+      <DependentUpon>InboxPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Inbox\InboxItemTemplate.xaml.cs">
+      <DependentUpon>InboxItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Outbox\OutboxPage.xaml.cs">
+      <DependentUpon>OutboxPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Requests\RequestPage.xaml.cs">
+      <DependentUpon>RequestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Setting\SettingPage.xaml.cs">
+      <DependentUpon>SettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\_Partials\MainHeader.xaml.cs">
+      <DependentUpon>MainHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\InvoiceModel.cs" />
+    <Compile Include="Pages\Invoice\InvoicePage.xaml.cs">
+      <DependentUpon>InvoicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceItemTemplate.xaml.cs">
+      <DependentUpon>InvoiceItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MaterialMaster\MaterialMaster.xaml.cs">
+      <DependentUpon>MaterialMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PurchaseRequest\PurchaseRequest.xaml.cs">
+      <DependentUpon>PurchaseRequest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PurchaseOrder\PurchaseOrder.xaml.cs">
+      <DependentUpon>PurchaseOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\Custom\CarouselLayout.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\BaseViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\SwitcherPageViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\LinesView.xaml.cs">
+      <DependentUpon>LinesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\FilesView.xaml.cs">
+      <DependentUpon>FilesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\LogsView.xaml.cs">
+      <DependentUpon>LogsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\ICarouselViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Helper\HomeView.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\FileViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\LinesViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\LogsViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\MainViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\TabbedPageViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Helper\DynamicTemplateLayout.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Helper\PagerIndicatorTabs.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\InvoiceDetailPage.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Helper\LinesViewItem.xaml.cs">
+      <DependentUpon>LinesViewItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\LinesViewItemTemplate.xaml.cs">
+      <DependentUpon>LinesViewItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RequestsNew\NewInvoice.cs" />
+    <Compile Include="Pages\RequestsNew\Custom\CarouselLayout.cs" />
+    <Compile Include="Pages\RequestsNew\Helper\PagerIndicatorTabs.cs" />
+    <Compile Include="Pages\RequestsNew\ViewModel\TabbedPageViewModel.cs" />
+    <Compile Include="Pages\RequestsNew\ViewModel\BaseViewModel.cs" />
+    <Compile Include="Pages\RequestsNew\ViewModel\MainViewModel.cs" />
+    <Compile Include="Pages\RequestsNew\ViewModel\FileViewModel.cs" />
+    <Compile Include="Pages\RequestsNew\ViewModel\SwitcherPageViewModel.cs" />
+    <Compile Include="Pages\RequestsNew\Subview\NewInvoiceMain.xaml.cs">
+      <DependentUpon>NewInvoiceMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RequestsNew\Subview\NewInvoiceFiles.xaml.cs">
+      <DependentUpon>NewInvoiceFiles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProofOfDelivery\ProofOfDeliveryPage.xaml.cs">
+      <DependentUpon>ProofOfDeliveryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\ViewModel\SignatureModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\SignatureView.xaml.cs">
+      <DependentUpon>SignatureView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\Custom\SignaturePad.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\LogsViewItemTemplate.xaml.cs">
+      <DependentUpon>LogsViewItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RequestsNew\Subview\NewInvoiceComment.xaml.cs">
+      <DependentUpon>NewInvoiceComment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RequestsNew\ViewModel\CommentViewModel.cs" />
+    <Compile Include="Pages\OInvoice\OInvoicePage.xaml.cs">
+      <DependentUpon>OInvoicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OInvoice\OInvoiceDetail\Custom\CarouselLayout.cs" />
+    <Compile Include="Pages\OInvoice\OInvoiceDetail\Helper\PagerIndicatorTabs.cs" />
+    <Compile Include="Pages\OInvoice\OInvoiceDetail\OInvoiceDetailPage.cs" />
+    <Compile Include="Pages\OInvoice\OInvoiceDetail\ViewModel\TabbedPageViewModel.cs" />
+    <Compile Include="Pages\OInvoice\OInvoiceDetail\ViewModel\BaseViewModel.cs" />
+    <Compile Include="Pages\OInvoice\OInvoiceDetail\ViewModel\FileViewModel.cs" />
+    <Compile Include="Pages\OInvoice\OInvoiceDetail\ViewModel\LinesViewModel.cs" />
+    <Compile Include="Pages\OInvoice\OInvoiceDetail\ViewModel\LogsViewModel.cs" />
+    <Compile Include="Pages\OInvoice\OInvoiceDetail\ViewModel\MainViewModel.cs" />
+    <Compile Include="Pages\OInvoice\OInvoiceDetail\SubViews\OutboxMainView.xaml.cs">
+      <DependentUpon>OutboxMainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OInvoice\OInvoiceDetail\SubViews\OutboxFileView.xaml.cs">
+      <DependentUpon>OutboxFileView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OInvoice\OInvoiceDetail\SubViews\OutboxLineView.xaml.cs">
+      <DependentUpon>OutboxLineView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OInvoice\OInvoiceDetail\SubViews\OutboxLogView.xaml.cs">
+      <DependentUpon>OutboxLogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\StandardViewModel.cs" />
+    <Compile Include="ViewModel\AbstractViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\LogLeftMessageItemTemplate.xaml.cs">
+      <DependentUpon>LogLeftMessageItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\LogRightMessageItemTemplate.xaml.cs">
+      <DependentUpon>LogRightMessageItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TaskCounter.cs" />
+    <Compile Include="Messages\CancelledMessage.cs" />
+    <Compile Include="Messages\DownloadFinishedMessage.cs" />
+    <Compile Include="Messages\DownloadMessage.cs" />
+    <Compile Include="Messages\DownloadProgressMessage.cs" />
+    <Compile Include="Messages\StartLongRunningTaskMessage.cs" />
+    <Compile Include="Messages\StopLongRunningTaskMessage.cs" />
+    <Compile Include="Messages\TickedMessage.cs" />
+    <Compile Include="ViewModel\FileViewModel.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\AddNewFilePage.xaml.cs">
+      <DependentUpon>AddNewFilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RequestsNew\Subview\NewInvoiceLine.xaml.cs">
+      <DependentUpon>NewInvoiceLine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RequestsNew\ViewModel\LineViewModel.cs" />
+    <Compile Include="SQLite\BindableBase.cs" />
+    <Compile Include="SQLite\ISQLite.cs" />
+    <Compile Include="SQLite\DataAccess.cs" />
+    <Compile Include="SQLite\Model.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Popup\Popup.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Popup\PopupHidingEventArgs.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Popup\PopupPage.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Popup\PopupPageInitializer.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Popup\PopupSectionType.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Popup\PopupShowingEventArgs.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Popup\PopupTappedEventArgs.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Popup\TapGestureRecognizerVisitor.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Popup\VisualElementExtensions.cs" />
+    <Compile Include="Pages\RequestsNew\Subview\NewLineItemTemplate.xaml.cs">
+      <DependentUpon>NewLineItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SignatureView\ImageWithTouch.cs" />
+    <Compile Include="SignatureView\SignaturePage.cs" />
+    <Compile Include="SignatureView\SignaturePageRender.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\SubViews\FileViewPage.xaml.cs">
+      <DependentUpon>FileViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Invoice\InvoiceDetail\Custom\MyEntry.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Custom\EntryExt.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Custom\MyDatePicker.cs" />
+    <Compile Include="Pages\Invoice\InvoiceDetail\Custom\MyPDFWebView.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.1.5.1.6471\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.5.1.6471\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.1.114\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.1.114\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <ItemGroup>
+    <Reference Include="Acr.XamForms.SignaturePad">
+      <HintPath>..\packages\SignaturePad.Xamarin.Forms.PCL.1.0.0.1\lib\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Acr.XamForms.SignaturePad.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media">
+      <HintPath>..\packages\Xam.Plugin.Media.2.3.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Plugin.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Media.2.3.0\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Plugin.Media.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rg.Plugins.Popup.1.0.4\lib\portable-win+net45+wp8+win8+wpa81\Rg.Plugins.Popup.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Rg.Plugins.Popup.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rg.Plugins.Popup.1.0.4\lib\portable-win+net45+wp8+win8+wpa81\Rg.Plugins.Popup.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Splat">
+      <HintPath>..\packages\Splat.1.6.2\lib\Portable-net45+win+wpa81+wp80\Splat.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs">
+      <HintPath>..\packages\Acr.UserDialogs.6.0.1\lib\portable-win+net45+wp8+win8+wpa81\Acr.UserDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.UserDialogs.Interface">
+      <HintPath>..\packages\Acr.UserDialogs.6.0.1\lib\portable-win+net45+wp8+win8+wpa81\Acr.UserDialogs.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="UXDivers.Artina.Shared">
+      <HintPath>..\Components\lib\pcl\UXDivers.Artina.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.231\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.231\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.LocalNotifications">
+      <HintPath>..\packages\Xam.Plugins.Notifier.2.0.2\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.LocalNotifications.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.LocalNotifications.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Notifier.2.0.2\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.LocalNotifications.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.2.12\lib\portable-net45+wp80+wp81+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+Xamarin.Mac20+UAP10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.2.12\lib\portable-net45+wp80+wp81+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+Xamarin.Mac20+UAP10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCL.raw">
+      <HintPath>..\packages\SQLitePCL.raw.0.9.2\lib\portable-net45+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCL.raw.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCL.batteries">
+      <HintPath>..\packages\SQLitePCL.bundle_green.0.9.2\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCL.batteries.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net">
+      <HintPath>..\packages\sqlite-net-pcl.1.1.2\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="ModernHttpClient">
+      <HintPath>..\packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Share.Abstractions">
+      <HintPath>..\packages\Plugin.Share.4.0.3\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.Share.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Share">
+      <HintPath>..\packages\Plugin.Share.4.0.3\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Plugin.Share.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.231\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Fingerprint.Abstractions">
+      <HintPath>..\packages\Plugin.Fingerprint.1.4.5\lib\portable-net45+win8+wpa81+wp8\Plugin.Fingerprint.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Fingerprint">
+      <HintPath>..\packages\Plugin.Fingerprint.1.4.5\lib\portable-net45+win8+wpa81+wp8\Plugin.Fingerprint.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="assets\Icon-120.png" />
+    <None Include="assets\Icon-152.png" />
+    <None Include="assets\Icon-16.png" />
+    <None Include="assets\Icon-24.png" />
+    <None Include="assets\Icon-32.png" />
+    <None Include="assets\Icon-40.png" />
+    <None Include="assets\Icon-40%402x.png" />
+    <None Include="assets\Icon-60.png" />
+    <None Include="assets\Icon-60%402x.png" />
+    <None Include="assets\Icon-60%403x.png" />
+    <None Include="assets\Icon-64.png" />
+    <None Include="assets\Icon-72.png" />
+    <None Include="assets\Icon-72%402x.png" />
+    <None Include="assets\Icon-76.png" />
+    <None Include="assets\Icon-76%402x.png" />
+    <None Include="assets\Icon-Amazon.png" />
+    <None Include="assets\Icon-Small-40.png" />
+    <None Include="assets\Icon-Small-40%402x.png" />
+    <None Include="assets\Icon-Small-40%403x.png" />
+    <None Include="assets\Icon-Small-50.png" />
+    <None Include="assets\Icon-Small-50%402x.png" />
+    <None Include="assets\Icon-Small.png" />
+    <None Include="assets\Icon-Small%402x.png" />
+    <None Include="assets\Icon-Small%403x.png" />
+    <None Include="assets\Icon-hdpi.png" />
+    <None Include="assets\Icon-ldpi.png" />
+    <None Include="assets\Icon-mdpi.png" />
+    <None Include="assets\Icon-xhdpi.png" />
+    <None Include="assets\Icon-xxhdpi.png" />
+    <None Include="assets\Icon-xxxhdpi.png" />
+    <None Include="assets\Icon.png" />
+    <None Include="assets\Icon%402x.png" />
+    <None Include="assets\iTunesArtwork.png" />
+    <None Include="assets\iTunesArtwork%402x.png" />
+    <None Include="assets\upload.png" />
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\PopupView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\Login.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Smartdocs.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RootPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MasterMenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Inbox\InboxPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Inbox\InboxItemTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Outbox\OutboxPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Requests\RequestPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Setting\SettingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\_Partials\MainHeader.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoicePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceItemTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\MaterialMaster\MaterialMaster.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PurchaseRequest\PurchaseRequest.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PurchaseOrder\PurchaseOrder.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\MainView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\LinesView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\FilesView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\LogsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\Helper\LinesViewItem.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\LinesViewItemTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\RequestsNew\Subview\NewInvoiceMain.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\RequestsNew\Subview\NewInvoiceFiles.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ProofOfDelivery\ProofOfDeliveryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\SignatureView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\LogsViewItemTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\RequestsNew\Subview\NewInvoiceComment.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\OInvoice\OInvoicePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\OInvoice\OInvoiceDetail\SubViews\OutboxMainView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\OInvoice\OInvoiceDetail\SubViews\OutboxFileView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\OInvoice\OInvoiceDetail\SubViews\OutboxLineView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\OInvoice\OInvoiceDetail\SubViews\OutboxLogView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\LogLeftMessageItemTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\LogRightMessageItemTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\AddNewFilePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\RequestsNew\Subview\NewInvoiceLine.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\RequestsNew\Subview\NewLineItemTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\FileViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\CollobarateBackPopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Invoice\InvoiceDetail\SubViews\ExistingFilesView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Inbox\FileItemTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+  </Target>
+</Project>

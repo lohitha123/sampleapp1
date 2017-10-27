@@ -1,0 +1,6 @@
+/Volumes/MacSys/Work/Xamarin/untitled folder/smartdocs/Components/signature-pad-1.3.8/samples/Sample.iOS/obj/unified/iPhoneSimulator/Debug/mtouch-cache/32/Link/Xamarin.iOS.dll
+/Volumes/MacSys/Work/Xamarin/untitled folder/smartdocs/Components/signature-pad-1.3.8/samples/Sample.iOS/obj/unified/iPhoneSimulator/Debug/mtouch-cache/32/Link/SampleiOS.exe
+/Volumes/MacSys/Work/Xamarin/untitled folder/smartdocs/Components/signature-pad-1.3.8/samples/Sample.iOS/obj/unified/iPhoneSimulator/Debug/mtouch-cache/32/Link/SignaturePad.iOS.dll
+/Volumes/MacSys/Work/Xamarin/untitled folder/smartdocs/Components/signature-pad-1.3.8/samples/Sample.iOS/obj/unified/iPhoneSimulator/Debug/mtouch-cache/32/Link/System.dll
+/Volumes/MacSys/Work/Xamarin/untitled folder/smartdocs/Components/signature-pad-1.3.8/samples/Sample.iOS/obj/unified/iPhoneSimulator/Debug/mtouch-cache/32/Link/mscorlib.dll
+/Volumes/MacSys/Work/Xamarin/untitled folder/smartdocs/Components/signature-pad-1.3.8/samples/Sample.iOS/obj/unified/iPhoneSimulator/Debug/mtouch-cache/32/Link/System.Core.dll

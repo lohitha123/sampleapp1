@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="Smartdocs.LogRightMessageItemTemplate">
+
+	<Grid
+		ColumnSpacing="0" 
+		RowSpacing="0" 
+		VerticalOptions="StartAndExpand"
+		Padding="5,10,5,20"
+		BackgroundColor="{ StaticResource MainMenuBackgroundColor }"
+		>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="10*" />
+			<ColumnDefinition Width="90*" />
+		</Grid.ColumnDefinitions>
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+
+		<!-- BALLOON BACKGROUND -->
+		<StackLayout
+			Grid.Row="0" Grid.Column="1"
+			Padding="5"
+			VerticalOptions="EndAndExpand" >
+
+			<Label
+				TextColor="#FFFFFF"
+				FontSize="14"
+				Text="{ Binding Comments }" 
+
+			/>
+		</StackLayout>
+
+		<!-- WHEN -->
+		<Label 
+			Grid.Row="1" Grid.Column="1"
+			HorizontalOptions="Start"
+			VerticalOptions="CenterAndExpand"
+			TranslationX="10"
+			FontSize ="12"
+			TextColor="White"
+			Text="{ Binding Date }" 
+		/>
+
+		<!-- BY -->
+		<Label 
+			Grid.Row="1" Grid.Column="1"
+			TranslationX="-10"
+			FontSize ="12"
+			TextColor="White"
+			XAlign="End"
+			YAlign="Center" 
+			Text="{ Binding User }" 
+		/>
+	</Grid>
+	
+</ContentView>

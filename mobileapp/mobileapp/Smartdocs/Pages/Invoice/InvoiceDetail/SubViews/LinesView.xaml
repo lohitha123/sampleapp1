@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Smartdocs.LinesView"
+	BackgroundColor="#f2f9fc">
+
+   
+    <Grid Padding="10" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*" />
+            <RowDefinition Height="10*" />
+         
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0">
+            <ScrollView >
+                <StackLayout x:Name="linesRow" >
+
+                    <Grid BackgroundColor="White" RowSpacing="5" >
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <StackLayout Grid.Row="0" HeightRequest="5" BackgroundColor="#0d73a2" ></StackLayout>
+                        <StackLayout Grid.Row="1">
+                            <Grid x:Name="LineItemHeader" BackgroundColor="White" RowSpacing="0" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" HorizontalOptions="Center" TextColor="Gray" Text="Material" ></Label>
+                                <Label Grid.Column="1" HorizontalOptions="Center" TextColor="Gray" Text="Amount" ></Label>
+                            </Grid>
+                            <StackLayout>
+                                <Label x:Name="LineItemEmptyLabel" Text="There is no item data" HorizontalOptions="Center" IsVisible="false" TextColor="Black"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout x:Name="Row" Grid.Row="2"></StackLayout>
+                    </Grid>
+                    
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+        <StackLayout Grid.Row="1"  VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"  Margin="0,0,8,0">
+            <Button x:Name="ButtonAddComment" Text="Add" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" Style="{StaticResource BlueButtonStyle}"/>
+        </StackLayout>
+
+       
+    </Grid>
+
+</ContentView>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Smartdocs.NewInvoiceFiles">
+	<ScrollView>
+		<Grid Padding="10" ColumnSpacing="10" >
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<StackLayout Grid.Column="0" Grid.Row="0" BackgroundColor="White" Padding="10, 20">
+				<Label HorizontalOptions="Center" Text="Select Photos" TextColor="Black"></Label>
+				<Button x:Name="pickPhoto" Image="photo_library64.png" WidthRequest="55" HeightRequest="40" VerticalOptions="EndAndExpand" HorizontalOptions="Center"/>
+
+			</StackLayout>
+
+			<StackLayout Grid.Column="1" Grid.Row="0" BackgroundColor="White" Padding="10, 20">
+				<Label HorizontalOptions="Center" Text="Take a Picture" TextColor="Black"></Label>
+				<Button x:Name="takePhoto" Image="camera64.png" WidthRequest="55" HeightRequest="40" VerticalOptions="EndAndExpand" HorizontalOptions="Center"/>
+			</StackLayout>
+
+			<StackLayout Grid.Row = "1">
+				<Button x:Name = "removeBtn" Image="deny.png" HeightRequest="15" WidthRequest="15" HorizontalOptions="EndAndExpand" IsVisible="false"></Button>
+				<Image  HorizontalOptions="Center" x:Name="image"/>
+			</StackLayout>
+
+		</Grid>
+	</ScrollView>
+</ContentView>
