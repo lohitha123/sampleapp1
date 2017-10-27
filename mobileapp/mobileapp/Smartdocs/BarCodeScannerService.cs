@@ -6,6 +6,13 @@ namespace Smartdocs
 	public interface BarCodeScannerService
 	{
 		Task<string> ScanAsync();
+
+
+
+
+
+
+
 	}
 }
 
